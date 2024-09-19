@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+        <input id="numericGrade" />
+        <button onclick="convert()">hasilnya</button>
+        <h3 id="gradeDisplay"></h3>
+        <script>
+        const numericGrade = document.getElementById(
+        'numericGrade'
+        );
+        const gradeDisplay = document.getElementById(
+        'gradeDisplay'
+        );
+        function convert() {
+        const numeric = parseInt(numericGrade.value);
+        let grade;
+        if (numeric >= 90) {
+        grade = 'A';
+        } else if (numeric >= 80) {
+        grade = 'B';
+        } else if (numeric >= 70) {
+        grade = 'C';
+        } else if (numeric >= 60) {
+        grade = 'D';
+        }
+        console.log(grade);
+        gradeDisplay.innerText = `anda mendapatkan predikat ${grade}`;
+    }
+</script>
+</body>
+</html>
